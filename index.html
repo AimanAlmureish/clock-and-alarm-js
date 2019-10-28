@@ -13,13 +13,13 @@
     <button id="clickMe">Click Me!</button>
     <div class="list">
         <ul>
-            <li>Time Here</li>
+            <li>Stop Watch!</li>
         </ul>
     </div>
     <div class="alarm">
-        <input id="hours" type="text">
-        <input id="minutes" type="text">
-        <input id="seconds" type="text">
+        <input id="hours" type="text" placeholder="Enter Hours">
+        <input id="minutes" type="text" placeholder="Enter Minutes">
+        <input id="seconds" type="text" placeholder="Enter Seconds">
         <button id="addAlarm">Add Alarm!</button>
 
         <ul>
@@ -30,7 +30,6 @@
         let timeLabel = document.querySelector("label");
         let list = document.querySelector(".list ul");
         let alarmList = document.querySelector(".alarm ul");
-
         let hours = document.querySelector("#hours");
         let minutes = document.querySelector("#minutes");
         let seconds = document.querySelector("#seconds");
