@@ -96,6 +96,22 @@ or illegal use will expose you to face the LAW  */
     list-style: none;
 }
 
+.t-weight-100 {
+    font-weight: 100;
+}
+
+.t-weight-300 {
+    font-weight: 300;
+}
+
+.t-weight-600 {
+    font-weight: 700;
+}
+
+.t-weight-900 {
+    font-weight: 900;
+}
+
 [class*="col-fl"] {
     width: 100%;
     float: left;

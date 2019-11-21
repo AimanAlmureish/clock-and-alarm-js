@@ -2,3 +2,15 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background-color: rgb(17, 17, 17);
+    color: white;
+}
+
+.clock label {
+    font-family: "Orbitron";
+    font-size: 10em;
+    color: aliceblue;
+    /* color: rgb(179, 121, 233); */
+}

@@ -7,27 +7,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/kvass.css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron:100,300,400,500,,600,700' rel='stylesheet' type='text/css'>
     <title>Document</title>
 </head>
 
 <body>
-    <div class="clock"><label for=""></label></div><br>
-    <button id="clickMe">Click Me!</button>
-    <div class="list">
-        <ul>
-            <li>Stop Watch!</li>
-        </ul>
-    </div>
-    <div class="alarm">
-        <input id="hours" type="text" placeholder="Enter Hours">
-        <input id="minutes" type="text" placeholder="Enter Minutes">
-        <input id="seconds" type="text" placeholder="Enter Seconds">
-        <button id="addAlarm">Add Alarm!</button>
+    <main>
+        <div class="wrapper">
+            <div class="col-fl-md-12">
+                <div class="clock t-center t-weight-900"><label for=""></label></div><br>
+            </div>
+            <div class="col-fl-md-12">
+                <div class="col-fl-md-6">
+                    <button id="clickMe">Click Me!</button>
+                    <div class="list">
+                        <ul class="list-none">
+                            <li>Stop Watch!</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-fl-md-6">
+                    <div class="alarm">
+                        <input id="hours" type="text" placeholder="Enter Hours">
+                        <input id="minutes" type="text" placeholder="Enter Minutes">
+                        <input id="seconds" type="text" placeholder="Enter Seconds">
+                        <button id="addAlarm">Add Alarm!</button>
 
-        <ul>
-            <li>Alarm Here</li>
-        </ul>
-    </div>
+                        <ul class="list-none">
+                            <li>Alarm Here</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
     <script src="./js/script.js"></script>
 
 </body>
