@@ -27,6 +27,11 @@
         </ul>
     </div>
     <script>
+        audio = new Audio();
+        audio.src = "./audio/HappyTreeFriends.mp3";
+        audio.loop = true;
+
+
         let timeLabel = document.querySelector("label");
         let list = document.querySelector(".list ul");
         let alarmList = document.querySelector(".alarm ul");
@@ -73,7 +78,9 @@
             for (let index = 0; index < arr.length; index++) {
                 const element = arr[index];
                 if (element === listChildAlarm.innerHTML) {
-                    alert(true)
+                    alert(audio.play());
+                    audio.pause();
+                    audio.currentTime = 0;
                     arr = []
                 } else {
                     console.log(false);
