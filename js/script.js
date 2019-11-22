@@ -72,8 +72,7 @@ var refresh = setInterval(function() {
     timeLabel.innerHTML += (" : " + date.getSeconds());
     // arr.push(date.toTimeString());
     arr.push(timeLabel.innerHTML);
-    console.log(arr);
-    console.log(timeLabel.innerHTML);
+
     var refreshArray = setInterval(function() {
             arr = [];
         },
@@ -85,9 +84,7 @@ var refresh = setInterval(function() {
             audio.pause();
             audio.currentTime = 0;
             arr = []
-        } else {
-            console.log(false);
-        }
+        } else {}
 
     }
 
