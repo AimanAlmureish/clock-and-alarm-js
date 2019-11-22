@@ -11,12 +11,23 @@ let minutes = document.querySelector("#minutes");
 let seconds = document.querySelector("#seconds");
 
 let tempList = document.createElement("li");
-tempList.innerHTML = "Your time will appear here"
+tempList.innerHTML = "Your stop watch time!"
 list.appendChild(tempList)
 
 let tempList2 = document.createElement("li");
-tempList2.innerHTML = "Your time will appear here"
+tempList2.innerHTML = "Your alarms here!"
 alarmList.appendChild(tempList2)
+
+
+let warning = document.createElement("li")
+warning.innerHTML = "You have to specify time!"
+alarmList.appendChild(warning)
+warning.style.display = "none"
+
+warning.style.color = "rgb(218, 96, 75)";
+tempList2.style.color = "rgb(218, 96, 75)";
+tempList.style.color = "rgb(218, 96, 75)";
+
 
 
 
@@ -36,17 +47,18 @@ let listChildAlarm = ""
 
 function addAlarmFunc() {
 
-    listChildAlarm = document.createElement("li");
-    listChildAlarm.innerHTML = hours.value + " : " + minutes.value + " : " + seconds.value;
-    alarmList.appendChild(listChildAlarm);
-    tempList2.style.display = "none"
+
     if (hours.value.length == 0 && minutes.value.length == 0 && seconds.value.length == 0) {
-        tempList2.innerHTML = "Please specify time"
+
+        tempList2.innerHTML = "Please specify time!"
+        warning.style.display = "block"
+
     } else {
         listChildAlarm = document.createElement("li");
         listChildAlarm.innerHTML = hours.value + " : " + minutes.value + " : " + seconds.value;
         alarmList.appendChild(listChildAlarm);
         tempList2.style.display = "none"
+        warning.style.display = "none"
     }
 
 };
@@ -70,7 +82,7 @@ var refresh = setInterval(function() {
     for (let index = 0; index < arr.length; index++) {
         const element = arr[index];
         if (element === listChildAlarm.innerHTML) {
-            alert(audio.play());
+            confirm(audio.play());
             audio.pause();
             audio.currentTime = 0;
             arr = []
