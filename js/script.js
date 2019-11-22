@@ -50,7 +50,6 @@ function addAlarmFunc() {
 
     if (hours.value.length == 0 && minutes.value.length == 0 && seconds.value.length == 0) {
 
-        tempList2.innerHTML = "Please specify time!"
         warning.style.display = "block"
 
     } else {
