@@ -11,6 +11,52 @@ body {
 .clock label {
     font-family: "Orbitron";
     font-size: 10em;
-    color: aliceblue;
+    color: transparent;
+    /* text-fill-color: transparent; */
+    background-clip: text;
     /* color: rgb(179, 121, 233); */
+    background-image: linear-gradient(rgb(218, 96, 75), #534843);
+}
+
+button {
+    background-color: rgb(246, 111, 87);
+    border-style: none;
+    color: aliceblue;
+    padding: 1em 2em;
+    font-size: 0.9em;
+    border-radius: 25px;
+    position: relative;
+    transition: all .3s ease;
+}
+
+button:hover {
+    background-color: #534843;
+    color: aliceblue;
+    padding: 1em 2em;
+    font-size: 0.9em;
+    border-radius: 25px;
+    position: relative;
+    transition: all .3s ease;
+}
+
+.list {
+    padding-top: 2em;
+}
+
+.alarm input {
+    padding: 1em;
+    border-radius: 5px;
+}
+
+input:focus {
+    border-color: rgb(246, 111, 87);
+}
+
+.inputs {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+ul li {
+    font-size: 2em;
 }

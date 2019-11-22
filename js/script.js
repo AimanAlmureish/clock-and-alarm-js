@@ -10,12 +10,23 @@ let hours = document.querySelector("#hours");
 let minutes = document.querySelector("#minutes");
 let seconds = document.querySelector("#seconds");
 
+let tempList = document.createElement("li");
+tempList.innerHTML = "Your time will appear here"
+list.appendChild(tempList)
+
+let tempList2 = document.createElement("li");
+tempList2.innerHTML = "Your time will appear here"
+alarmList.appendChild(tempList2)
+
+
+
 
 let buttonClick = document.querySelector("#clickMe").addEventListener("click", function() {
 
     let listChild = document.createElement("li");
     listChild.innerHTML = timeLabel.innerHTML;
     list.appendChild(listChild);
+    tempList.style.display = "none"
 });
 
 
@@ -28,6 +39,16 @@ function addAlarmFunc() {
     listChildAlarm = document.createElement("li");
     listChildAlarm.innerHTML = hours.value + " : " + minutes.value + " : " + seconds.value;
     alarmList.appendChild(listChildAlarm);
+    tempList2.style.display = "none"
+    if (hours.value.length == 0 && minutes.value.length == 0 && seconds.value.length == 0) {
+        tempList2.innerHTML = "Please specify time"
+    } else {
+        listChildAlarm = document.createElement("li");
+        listChildAlarm.innerHTML = hours.value + " : " + minutes.value + " : " + seconds.value;
+        alarmList.appendChild(listChildAlarm);
+        tempList2.style.display = "none"
+    }
+
 };
 console.log(listChildAlarm);
 let arr = [];
